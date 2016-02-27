@@ -1,0 +1,10 @@
+share
+share/charsets
+share/english
+share/mysql/english
+share/mysql/charsets
+share/aclocal
+share/bulgarian
+support-files
+scripts
+bin
