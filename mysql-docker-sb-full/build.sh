@@ -1,6 +1,17 @@
 #!/bin/bash
 cp Dockerfile.small Dockerfile
-docker build -t datacharmer/mysql-sb-gz .
+IMAGE=datacharmer/mysql-sb-gz
+docker build  -t $IMAGE:latest .
 if [ "$?" != "0" ] ; then exit 1 ; fi
 cp Dockerfile.full Dockerfile
-docker build -t datacharmer/mysql-sb-full  .
+IMAGE=datacharmer/mysql-sb-full
+
+cd dbdata
+for D in ../dbdata-gz/*.gz
+do
+    tar -xzf $D
+done
+cd ..
+docker build  -t $IMAGE:latest .
+
+rm -rf dbdata/5*

@@ -51,7 +51,7 @@ The image datacharmer/mysql-sb-gz is less than 300 MB. The tarballs are compress
     mysql [localhost] {msandbox} ((none)) >
 
 
-The second image works exactly like the first one, but it does not require ./setup.sh. It will be ready to use. The drawback is that it is 587 MB instead of 272.
+The second image works exactly like the first one, but it does not require ./setup.sh. It will be ready to use. The drawback is that it is 481 MB instead of 272.
 
     $ docker run -ti --name sbox datacharmer/mysql-sb-full bash
 

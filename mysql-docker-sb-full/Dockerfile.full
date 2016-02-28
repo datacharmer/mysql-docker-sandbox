@@ -3,7 +3,6 @@ FROM datacharmer/mysql-sb-base
 MAINTAINER Giuseppe Maxia <gmax@cpan.org>
 
 COPY dbdata /opt/mysql
-COPY setup.sh /home/msandbox/setup.sh
 
 USER msandbox
 WORKDIR /home/msandbox
@@ -11,6 +10,6 @@ ENV USER=msandbox
 
 COPY README.md /home/msandbox/README
 
-# Uncomment this line for mysql-docker-sb-full (warning: almost doubles the image size)
-RUN /home/msandbox/setup.sh && rm /home/msandbox/setup.sh
-
+COPY docker-entrypoint.sh /
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+ 
