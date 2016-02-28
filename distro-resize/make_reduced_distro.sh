@@ -1,5 +1,14 @@
 #!/bin/bash
 
+OS=$(uname -s)
+if [ "$OS" != "Linux" ]
+then
+    echo "# WARNING! This script was only tested on Linux"
+    echo "# Press ENTER to continue AT YOUR OWN RISK"
+    echo "# or press CTRL-C to abort"
+    read
+fi
+
 distro=$1
 if [ -z "$distro" ]
 then
@@ -48,7 +57,7 @@ done
 
 for F in $(cat $files)
 do
-    cp full_$distro/$F $distro/$F
+    cp --preserve full_$distro/$F $distro/$F
 done
 
 mkdir $distro/lib
