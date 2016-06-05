@@ -1,3 +1,7 @@
+# DEPRECATED - This repo has been replaced 
+
+See [mysql-docker-minimal](https://github.com/datacharmer/mysql-docker-minimal) for a better solution
+
 # MySQL Sandbox and Docker 
 
 This repository contains the code to create Docker images for MySQL Sandbox in Docker.
