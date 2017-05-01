@@ -1,0 +1,6 @@
+FROM busybox
+
+MAINTAINER Giuseppe Maxia <gmax@cpan.org>
+
+COPY dbdata /opt/mysql
+
