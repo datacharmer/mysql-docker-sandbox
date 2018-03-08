@@ -45,4 +45,5 @@ bin/mysql
 bin/mysqladmin
 bin/mysqld_safe
 bin/mysqldump
+bin/mysqlpump
 bin/mysqld
