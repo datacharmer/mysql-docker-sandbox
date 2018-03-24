@@ -1,6 +1,6 @@
 FROM datacharmer/mysql-sb-base
 
-MAINTAINER Giuseppe Maxia <gmax@cpan.org>
+LABEL MAINTAINER Giuseppe Maxia <gmax@cpan.org>
 
 COPY dbdata-gz /opt/mysql
 COPY setup.sh /home/msandbox/setup.sh

@@ -1,7 +1,7 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 #FROM debian:jessie
 
-MAINTAINER Giuseppe Maxia <gmax@cpan.org>
+LABEL MAINTAINER Giuseppe Maxia <gmax@cpan.org>
 
 RUN groupadd -r msandbox \
     && useradd -m -s /bin/bash -g msandbox msandbox 

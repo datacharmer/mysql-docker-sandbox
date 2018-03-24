@@ -28,7 +28,6 @@ share/dictionary.txt
 share/english/errmsg.sys
 share/aclocal/mysql.m4
 share/errmsg-utf8.txt
-share/bulgarian/errmsg.sys
 bin/mysql_config
 bin/mysqlbinlog
 bin/my_print_defaults
