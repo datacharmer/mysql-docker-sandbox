@@ -37,4 +37,4 @@ bin/mysqld_safe
 bin/mysqldump
 bin/mysqlpump
 bin/mysqld
-bin/mysqld-debug
+bin/mysqld_upgrade

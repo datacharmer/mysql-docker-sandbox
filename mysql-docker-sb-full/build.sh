@@ -28,10 +28,10 @@ function build_gz
 {
     for TB in $( perl repo_list.pl)
     do
-        cp -v $binaries/$TB dbdata
+        cp -v $binaries/$TB dbdata-gz
     done
     build small datacharmer/mysql-sb-gz
-    rm -f dbdata-gz/[85]*
+    rm -f dbdata-gz/[854]*
 }
 
 function prepare_full
@@ -39,11 +39,11 @@ function prepare_full
     cd dbdata
     for TB in $( perl ../repo_list.pl)
     do
-        target=$(basename $TB .tar.gz)
+        target=$(basename $TB .tar.xz)
         if [ ! -d $target ]
         then
-            echo "tar -xzf $TB "
-            tar -xzf $binaries/$TB
+            echo "tar -xf $TB "
+            tar -xf $binaries/$TB
         fi
     done
     cd ..
@@ -85,4 +85,4 @@ case $target in
         ;;
 esac
 
-rm -rf dbdata/[85]*
+rm -rf dbdata/[854]*

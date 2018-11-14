@@ -1,8 +1,8 @@
 #!/bin/bash
 datadir=$(dirname $0)
 
-for ARCHIVE in $(ls $datadir/*.gz ) 
+for ARCHIVE in $(ls $datadir/*.xz ) 
 do
     echo "# expanding $(basename $ARCHIVE)"
-    tar -xzf $ARCHIVE && rm -f $ARCHIVE
+    tar -xf $ARCHIVE && rm -f $ARCHIVE
 done

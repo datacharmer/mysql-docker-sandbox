@@ -10,7 +10,7 @@ unless ( -d $sandbox_binary)
     die "# Directory $sandbox_binary not found\n";
 }
 
-my @tarballs = map { basename $_ } grep {-f $_} glob ("$sandbox_binary/*.gz") ;
+my @tarballs = map { basename $_ } grep {-f $_} glob ("$sandbox_binary/*.xz") ;
 
 sub tb_split
 {
@@ -49,5 +49,5 @@ for my $tb (@tarballs)
 #print "\n";
 for my $tb (sort  keys %test_tb)
 {
-    print "$tb.$test_tb{$tb}.tar.gz\n"
+    print "$tb.$test_tb{$tb}.tar.xz\n"
 }
