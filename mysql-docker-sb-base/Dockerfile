@@ -11,7 +11,8 @@ RUN mkdir /docker-entrypoint-initdb.d
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y make sudo libaio1 vim-tiny perl-modules libnuma1 binutils bash-completion xz-utils \
+    && apt-get install -y make sudo libaio1 vim-tiny perl-modules libnuma1 binutils bash-completion \
+        xz-utils wget less net-tools lsof \
     && rm -rf /var/lib/apt/lists/* \
     && echo "msandbox    ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
     && mkdir /opt/mysql \
